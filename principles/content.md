@@ -49,3 +49,7 @@ install guide."
 - Consistent voice and terminology across the site (one word per concept).
 - Unique, descriptive `<title>` and meta description per page; meaningful headings;
   these serve both users and search.
+- **Ration em-dashes** (`CONTENT-DASH`, copy the tool *writes*, not user content):
+  prefer commas, periods, or parentheses; reserve the em-dash for a deliberate
+  aside or an emphatic break. Max ~1 per paragraph, never two in one sentence.
+  Multiple dashes per paragraph is the tell of generated text — rewrite it.

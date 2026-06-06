@@ -1,6 +1,6 @@
 {
   "name": "uiux",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Audit, fix, and scaffold web UI/UX against a built-in set of usability, accessibility, visual-design, responsive, content, performance, and Give-Good-UX (value & cognitive-clarity) principles. Point it at a URL or a repository.",
   "author": {
     "name": "brain-fuel"

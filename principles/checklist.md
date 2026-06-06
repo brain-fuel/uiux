@@ -42,6 +42,7 @@ friction) · `minor` (noticeable) · `polish` (refinement).
 | VIS-CONSISTENCY | Repeated elements (buttons, cards, inputs) look and behave consistently | consistent | major |
 | VIS-DENSITY | Adequate whitespace; content not cramped or wall-of-text | balanced | minor |
 | VIS-IMAGERY | Images sharp (correct resolution, no stretching/wrong aspect ratio), consistent treatment | correct | minor |
+| VIS-PROSE-SCOPE | Prose typography rules (paragraph/list margins, line spacing) are scoped to content containers (`.prose`, `article`) — never global element selectors that leak into layout lists (nav menus, card grids, breadcrumbs, tag lists) | layout lists have zero inherited prose margins | minor |
 
 ## USAB — Usability heuristics (Nielsen) & interaction
 
@@ -57,6 +58,7 @@ friction) · `minor` (noticeable) · `polish` (refinement).
 | USAB-EFFICIENCY | Common tasks are short; primary action reachable without hunting | conforms | minor |
 | USAB-404 | Helpful 404/error pages with a route back | present | minor |
 | USAB-FORMS | Forms: logical order, grouped fields, inline validation, no needless required fields | conforms | major |
+| USAB-NAV-REACH | On pages > ~2 viewports tall, primary nav is reachable without scrolling to top (sticky or reveal-on-scroll-up header, or equivalent) | reachable mid-page | major |
 
 ## RESP — Responsive & cross-device
 
@@ -69,6 +71,18 @@ friction) · `minor` (noticeable) · `polish` (refinement).
 | RESP-IMG | Responsive images (`srcset`/sizes or fluid `max-width:100%`); no oversized downloads on mobile | conforms | minor |
 | RESP-NAV | Navigation works on small screens (accessible menu toggle, not a desktop bar overflowing) | works | major |
 
+## STICKY — Fixed & sticky headers
+
+Audit every rule here whenever any fixed/sticky header exists. See the
+"sticky-header tax" recipe in [`responsive.md`](./responsive.md).
+
+| ID | Rule | Threshold | Default |
+|----|------|-----------|---------|
+| STICKY-ANCHORS | `scroll-padding-top` (or `scroll-margin` on targets) set so anchor jumps and focus land clear of the fixed bar | content never hidden under bar | major |
+| STICKY-NOHIDE | Auto-hiding header never hides while its menu is open or keyboard focus is inside it (handle `focusin`) | verified | major |
+| STICKY-MENUFIT | Open mobile menu capped to viewport (`max-height: calc(100dvh - header)` + overflow) so all items reachable on short/landscape screens | all items reachable | major |
+| STICKY-MOTION | Header show/hide respects `prefers-reduced-motion` (instant, no slide) | respected | minor |
+
 ## CONTENT — Content & microcopy
 
 | ID | Rule | Threshold | Default |
@@ -79,6 +93,7 @@ friction) · `minor` (noticeable) · `polish` (refinement).
 | CONTENT-VALUEPROP | Above the fold communicates what this is and why it matters within seconds | present | major |
 | CONTENT-LINKTEXT | Link text is descriptive out of context (no bare "here"/"read more" ambiguity) | conforms | minor |
 | CONTENT-TONE | Consistent voice/tone and terminology across the site | consistent | polish |
+| CONTENT-DASH | Generated copy uses em-dashes sparingly: max ~1 per paragraph, never two in one sentence, never as a default connector where a comma, period, or parentheses serve (applies to copy the tool writes, not user content) | conforms | polish |
 
 ## PERF — Performance (UX-affecting)
 

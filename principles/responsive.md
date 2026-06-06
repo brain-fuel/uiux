@@ -35,6 +35,39 @@ toggle (proper `button`, `aria-expanded`, keyboard-operable), not a horizontal b
 that overflows or wraps awkwardly. Verify the menu opens, traps focus sensibly,
 and closes.
 
+## Nav reachability & the sticky-header tax — `USAB-NAV-REACH`, `STICKY-*`
+
+On pages taller than ~2 viewports, a **static** top header forces a scroll-to-top
+just to navigate. Make primary nav reachable mid-page (`USAB-NAV-REACH`). Two
+patterns:
+
+- **Always-sticky** — simple, but a permanently fixed bar eats ~12% of a phone
+  viewport. Costly on mobile.
+- **Reveal-on-scroll-up ("headroom")** — hide the header while scrolling down,
+  bring it back on any upward scroll. Preferred on mobile; reclaims the space.
+
+A fixed/sticky header brings a tax — audit each `STICKY-*` rule whenever one exists:
+
+- **`STICKY-ANCHORS`** — set `scroll-padding-top` (or `scroll-margin-top` on anchor
+  targets) equal to the header height, so `#anchor` jumps and focus don't land
+  under the bar.
+- **`STICKY-NOHIDE`** — an auto-hiding header must NOT hide while its menu is open
+  or while keyboard focus is inside it; gate the hide on `!menuOpen &&
+  !header.contains(document.activeElement)` and handle `focusin`.
+- **`STICKY-MENUFIT`** — cap the open mobile menu to the viewport
+  (`max-height: calc(100dvh - var(--header-h))` + `overflow:auto`) so every item is
+  reachable on short/landscape screens.
+- **`STICKY-MOTION`** — respect `prefers-reduced-motion`: show/hide instantly, no
+  slide.
+
+### Reference implementation (shipped, works)
+
+Sticky header + `transform: translateY(-100%)` toggle; rAF-throttled **passive**
+scroll listener; add `is-elevated` once `scrollY > 4`; hide only when
+`y > lastY && y > 160 && !menuOpen && !header.contains(document.activeElement)`.
+Source: `hopelutheransunbury.org` — `layouts/partials/header.html` +
+`assets/css/main.css` (commit `184adb8`).
+
 ## Images & media
 
 Serve appropriately-sized images per viewport (`srcset`/`sizes`, or CSS fluid

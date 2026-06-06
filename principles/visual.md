@@ -71,3 +71,39 @@ Reach for space and grouping before you reach for lines — see clutter
 Repeated components — buttons, cards, inputs, badges — should be visually and
 behaviorally identical. Inconsistency taxes the user and signals low quality.
 A component/token system enforces this by construction.
+
+## Keep prose rules out of layout — `VIS-PROSE-SCOPE`
+
+Prose typography (paragraph rhythm, list-item margins, line spacing) belongs to
+**content containers**, not to global element selectors. A global rule like
+`li + li { margin-block-start: 0.35em }` leaks into every layout list — nav menus,
+card grids, breadcrumbs, tag lists — pushing every item but the first out of line.
+(Real bug: a horizontal nav where every item except "Worship" sat 0.35em low.)
+
+Detection:
+
+- Grep the CSS for global `li`, `li + li`, `p + p`, or bare `ul/ol` margin rules
+  not scoped under a content class.
+- Inspect the computed `margin-block-start` on a nav/card `<li>`. Any nonzero value
+  inherited from a prose rule = fail.
+
+Fix — scope the prose rules, or reset on layout lists:
+
+```css
+/* scope */
+.prose li + li { margin-block-start: 0.35em }
+/* or reset where layout lists live */
+.site-nav li + li, .cards li + li { margin-block-start: 0 }
+```
+
+## Separating a sticky header from content
+
+Don't fence a fixed header off with a heavy brand-color border — it reads as a
+stray page element, especially on mobile. Instead:
+
+- A **hairline** divider at rest, plus a **soft shadow that appears only once
+  content scrolls beneath** (elevation-on-scroll; toggle an `is-elevated` class).
+- Express brand color as a **thin accent strip at the very top edge** of the page,
+  not as a thick rule under the header.
+
+See `STICKY-*` in [`responsive.md`](./responsive.md) for the behavior rules.
