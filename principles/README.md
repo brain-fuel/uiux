@@ -9,17 +9,23 @@ The philosophy behind the `/uiux` command. The measurable rules live in
 - [`responsive.md`](./responsive.md) — adaptable, cross-device layouts
 - [`content.md`](./content.md) — clarity, microcopy, information architecture
 - [`performance.md`](./performance.md) — speed as a UX feature
+- [`value.md`](./value.md) — make value visible, reduce cognitive load (Give Good UX)
 
 ## North star
 
 **Good UI/UX is invisible.** The interface gets out of the way so the user
-accomplishes their goal with minimum friction, confusion, or exclusion. Every
-rule here serves one of four user needs:
+accomplishes their goal with minimum friction, confusion, or exclusion. Put
+another way (Joe Natoli's *Give Good UX*): **the UI is a means to an end** — every
+element either illuminates the path to the user's goal or obstructs it. Every rule
+here serves one of four user needs:
 
 1. **Can I perceive it?** (contrast, size, legibility) → accessibility + visual
 2. **Can I understand it?** (hierarchy, labels, copy) → visual + content
 3. **Can I operate it?** (keyboard, touch, feedback, error recovery) → usability + responsive
 4. **Will it respect my time and context?** (speed, device, motion, attention) → performance + responsive
+
+Cutting across all four: **is the value visible, and is the cognitive load as low
+as it can be?** → `GGUX-*` ([`value.md`](./value.md)).
 
 ## How to weigh tradeoffs
 

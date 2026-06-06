@@ -92,6 +92,24 @@ friction) · `minor` (noticeable) · `polish` (refinement).
 | PERF-RENDER | No render-blocking that delays first paint; critical CSS prioritized; defer non-critical JS | conforms | minor |
 | PERF-ASSETS | No giant unused CSS/JS shipped; assets minified | conforms | polish |
 
+## GGUX — Give Good UX (value & cognitive clarity)
+
+Joe Natoli's *Give Good UX* principles, made auditable. Premise: **the UI is a
+means to an end** — every element either illuminates the path to the user's goal
+or obstructs it. See [`value.md`](./value.md).
+
+| ID | Rule | Threshold | Default |
+|----|------|-----------|---------|
+| GGUX-EARN-PLACE | Every onscreen element earns its place — it advances the user's task or it's removed; no decoration competing with the goal (visual clutter) | each element justified | minor |
+| GGUX-VALUE-VISIBLE | Value is exposed, not hidden: benefit is evident, multi-step flows **signal progress** (step N of M), and the user can always see what they're getting | per flow | major |
+| GGUX-GIVE-FIRST | Don't ask to receive before giving — core value is experienceable before registration/paywall; prioritize adoption over up-front signup | no value gated pre-adoption | major |
+| GGUX-CHOICES | Limit competing choices at each decision point (Hick's Law); defer or subordinate the rest rather than presenting all at once | minimized | minor |
+| GGUX-DISCLOSURE | Show only what's needed now; advanced/rare/future options are deferred behind progressive disclosure, not dumped on the first screen | deferred | minor |
+| GGUX-ICONLABEL | Icon-only controls only when the icon is a recognized convention or literal object **and** space is constrained **and** it's adequately sized; otherwise pair it with a text label | conforms | major |
+| GGUX-CONTEXT | Designed for real context of use (mobile interruptions, one-handed, glanceable); the core task is reachable without unnecessary steps | conforms | major |
+| GGUX-GROUPING | Layout uses Gestalt grouping (proximity, similarity, enclosure, common region, continuation, closure) so relationships are perceived pre-attentively | applied | minor |
+| GGUX-CHART | Data is shown in a format suited to the question (compare→bar, trend over time→line, part-to-whole→stacked bar / sparing pie, correlation→scatter, distribution→histogram); no misleading scales or chart junk | suitable | minor |
+
 ---
 
 ## How to apply

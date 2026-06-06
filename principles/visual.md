@@ -39,6 +39,26 @@ How the eye is guided. Rules: `VIS-*`.
 - **Whitespace is not wasted space** — it creates focus and grouping. Avoid
   cramped, wall-to-wall density and walls of text.
 
+## Grouping (Gestalt) — `GGUX-GROUPING`
+
+The eye perceives relationships *before* it reads. Natoli's *Value Made Visible*
+leans on the Gestalt laws to make structure obvious without borders or labels:
+
+- **Proximity** — near = related. The default, strongest grouping tool.
+- **Similarity** — shared color/shape/size reads as the same kind of thing
+  (all destructive actions red, all links one style).
+- **Enclosure / common region** — a shared background, card, or border binds items
+  into one group; use it *instead of* heavy borders, not on top of them.
+- **Continuation** — the eye follows lines and alignment; arrange items so the
+  gaze flows along the intended path.
+- **Closure** — the mind completes implied shapes, so partial cues can suggest
+  grouping without drawing every box.
+- **Figure-ground** — keep foreground (content/actions) clearly separated from
+  background; ambiguous figure-ground is what makes a UI feel noisy.
+
+Reach for space and grouping before you reach for lines — see clutter
+(`GGUX-EARN-PLACE`).
+
 ## Imagery & icons
 
 - Correct resolution and **aspect ratio** (never stretch/squash); use the right

@@ -68,6 +68,7 @@ marked **unverified**, not passed.
 | [`responsive.md`](principles/responsive.md) | Cross-device layouts |
 | [`content.md`](principles/content.md) | Clarity, microcopy, IA |
 | [`performance.md`](principles/performance.md) | Core Web Vitals & speed |
+| [`value.md`](principles/value.md) | Make value visible, reduce cognitive load (Joe Natoli's *Give Good UX*) |
 
 Principles are plain Markdown — fork and tune them to your house style; the command
 reads whatever is in `principles/`.

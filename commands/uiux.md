@@ -34,11 +34,15 @@ ${CLAUDE_PLUGIN_ROOT}/principles/README.md         ← philosophy + how to weigh
 
 Then read the topic files relevant to the findings as you go:
 `usability.md`, `accessibility.md`, `visual.md`, `responsive.md`, `content.md`,
-`performance.md` (all under `${CLAUDE_PLUGIN_ROOT}/principles/`).
+`performance.md`, `value.md` (all under `${CLAUDE_PLUGIN_ROOT}/principles/`).
 
 Every finding, fix, and design decision MUST cite a principle ID from
-`checklist.md` (e.g. `A11Y-CONTRAST`, `VIS-HIERARCHY`). No citation → not a
-finding. This keeps the tool objective and reviewable.
+`checklist.md` (e.g. `A11Y-CONTRAST`, `VIS-HIERARCHY`, `GGUX-VALUE-VISIBLE`). No
+citation → not a finding. This keeps the tool objective and reviewable.
+
+Treat `value.md` (Give Good UX) as the lens over everything else: the UI is a
+means to an end, so beyond per-rule PASS/FAIL, ask whether the value is visible
+and the cognitive load is as low as it can be.
 
 ## Step 1 — Resolve the target
 
