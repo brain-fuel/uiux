@@ -1,0 +1,17 @@
+{
+  "name": "uiux",
+  "owner": {
+    "name": "brain-fuel"
+  },
+  "metadata": {
+    "description": "UI/UX audit, fix, and scaffolding commands driven by a bundled principles library.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "uiux",
+      "source": "./",
+      "description": "Audit, fix, or scaffold web UI/UX against built-in principles. Point /uiux at a URL or a repository."
+    }
+  ]
+}
