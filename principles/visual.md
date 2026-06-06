@@ -20,6 +20,13 @@ How the eye is guided. Rules: `VIS-*`.
 - **Limit families** (1–2) and weights. Pair a display/heading face with a
   readable body face, or use one well-chosen family.
 - Align to a baseline rhythm; avoid justified text on the web (rivers, bad wraps).
+- **Letter-spacing by size & case (`VIS-TRACKING`):** tighten large headings
+  (slight negative tracking, or a tighter display face); add tracking to all-caps
+  and small-caps runs so they don't crowd. Leave body at default.
+- **De-emphasize with contrast and weight, not size (`VIS-DEEMPHASIS`):** make
+  secondary text (labels, metadata) recede by lowering contrast or dropping weight
+  rather than shrinking it into illegibility. Build emphasis with color + weight —
+  pushing hierarchy on size alone yields oversized primaries and tiny secondaries.
 
 ## Color
 
@@ -38,6 +45,12 @@ How the eye is guided. Rules: `VIS-*`.
 - **Alignment:** everything aligns to a grid/edge. Misalignment reads as sloppy.
 - **Whitespace is not wasted space** — it creates focus and grouping. Avoid
   cramped, wall-to-wall density and walls of text.
+- **Space, background, shadow before borders (`VIS-BORDERS`):** borders multiply
+  fast and box everything into a grid of cages. Group with proximity or a shared
+  background instead; use at most one border treatment per region.
+- **Don't fill the whole screen (`VIS-WIDTH`):** give sidebars, forms, and cards a
+  fixed, content-appropriate width and keep margins at the page edges. Nothing has
+  to be full-bleed just because the nav bar is; full-bleed should be deliberate.
 
 ## Grouping (Gestalt) — `GGUX-GROUPING`
 
@@ -71,6 +84,22 @@ Reach for space and grouping before you reach for lines — see clutter
 Repeated components — buttons, cards, inputs, badges — should be visually and
 behaviorally identical. Inconsistency taxes the user and signals low quality.
 A component/token system enforces this by construction.
+
+## Personality & depth
+
+From *Refactoring UI*:
+
+- **Pick one personality and commit (`VIS-PERSONALITY`).** Font character,
+  border-radius, color temperature, and copy tone should pull the same direction
+  (elegant / playful / neutral). A sharp formal serif beside fat rounded buttons
+  reads as accidental.
+- **Supercharge the defaults (`VIS-DEFAULTS`).** Restyle the raw browser elements
+  that show up in real content — list markers, blockquotes, links, form controls.
+  Defaults signal "unfinished."
+- **Build depth deliberately (`VIS-DEPTH`).** Draw shadows from a defined scale
+  (small = buttons, medium = dropdowns, large = modals). For richer elevation,
+  layer two shadows (a tight dark one + a larger diffuse one) or reach for accent
+  borders and overlapping elements rather than one flat ad-hoc drop shadow.
 
 ## Keep prose rules out of layout — `VIS-PROSE-SCOPE`
 

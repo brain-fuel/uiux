@@ -39,6 +39,34 @@ as it can be?** → `GGUX-*` ([`value.md`](./value.md)).
 - **Evidence over taste.** Findings cite measurements and a checklist ID. "I don't
   like it" is not a finding; "body text is 3.1:1, fails A11Y-CONTRAST" is.
 
+## Form follows function (the older lineage)
+
+Make the structure legible; let function dictate form; measure before you theorize.
+Five centuries before "form follows function" was a slogan, Leonardo derived it from
+nature — every form exists to serve a function, and anything that serves none comes
+out ("nothing lacking, nothing superfluous"). That is exactly `GGUX-EARN-PLACE`: the
+UI is a means to an end, so each element either advances the task or is removed. His
+method was *experience before reasoning* — run the experiment, measure, then reason
+from what you measured — which is precisely how this auditor works: compute the
+contrast, inspect the DOM, read the CSS, never assert PASS from taste. And his maps,
+exploded views, and elevation drawings make the point that **representation matters**
+(`GGUX-OVERVIEW`, `GGUX-CHART`, `CONTENT-FIGCAPTION`): the value of a complex system
+lives in how understandably you present it. Good information design is not
+decoration; it is the function.
+
+## Lineage / sources
+
+The rules here distill several bodies of work into one auditable checklist:
+
+- **Nielsen's heuristics** + **WCAG 2.2 AA** — the `USAB-*` and `A11Y-*` baseline.
+- **Refactoring UI** (Schoger & Wathan) — much of `VIS-*`, incl. borders, width,
+  de-emphasis, personality, tracking, defaults, depth.
+- **Give Good UX** (Joe Natoli) — `GGUX-*`: value made visible, cognitive load,
+  progressive disclosure, icons & labels, the mobile mistakes (see [`value.md`](./value.md)).
+- **Make It Clear** (Patrick Winston) — `CONTENT-POINTFIRST`, `CONTENT-SIGNPOST`,
+  `CONTENT-FIGCAPTION`: lead with the point, signposting, standalone figures.
+- **Leonardo da Vinci's design method** — the "form follows function" lineage above.
+
 ## Severity, briefly
 
 `blocker` → some users literally cannot complete a core task. `major` → real

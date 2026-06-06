@@ -43,6 +43,13 @@ friction) · `minor` (noticeable) · `polish` (refinement).
 | VIS-DENSITY | Adequate whitespace; content not cramped or wall-of-text | balanced | minor |
 | VIS-IMAGERY | Images sharp (correct resolution, no stretching/wrong aspect ratio), consistent treatment | correct | minor |
 | VIS-PROSE-SCOPE | Prose typography rules (paragraph/list margins, line spacing) are scoped to content containers (`.prose`, `article`) — never global element selectors that leak into layout lists (nav menus, card grids, breadcrumbs, tag lists) | layout lists have zero inherited prose margins | minor |
+| VIS-BORDERS | Separate and group with spacing, background, or shadow before reaching for borders; a region uses at most one border treatment and avoids stacking adjacent outlined boxes | ≤1 border cue per grouping | minor |
+| VIS-WIDTH | Elements get a constrained, content-appropriate width instead of stretching every block edge-to-edge; sidebars/forms/cards are capped and the page keeps edge breathing room (full-bleed is deliberate, not default) | constrained, not edge-to-edge | minor |
+| VIS-DEEMPHASIS | Secondary text (labels, metadata, captions) recedes via reduced contrast and/or lighter weight, not by shrinking size into illegibility; emphasis is built with color + weight, not size alone | de-emphasis uses contrast/weight; body stays ≥ readable | minor |
+| VIS-PERSONALITY | Design choices express one deliberate, consistent personality: font character, border-radius, color temperature, and copy tone all align | consistent across components | minor |
+| VIS-TRACKING | Letter-spacing tuned by size/case: large headings tightened (slight negative tracking), all-caps/small-caps loosened, body left at default | conforms | polish |
+| VIS-DEFAULTS | Browser-default elements that appear in content are restyled to match the design: list markers, blockquotes, links, form controls (checkbox/radio/select) | styled, not raw default | polish |
+| VIS-DEPTH | Elevation is deliberate and consistent: shadows come from a defined scale (small=buttons, medium=dropdowns, large=modals); richer depth layers two shadows (tight + diffuse) or uses accent borders/overlap, not ad-hoc single drops | conforms to a shadow scale | polish |
 
 ## USAB — Usability heuristics (Nielsen) & interaction
 
@@ -94,6 +101,9 @@ Audit every rule here whenever any fixed/sticky header exists. See the
 | CONTENT-LINKTEXT | Link text is descriptive out of context (no bare "here"/"read more" ambiguity) | conforms | minor |
 | CONTENT-TONE | Consistent voice/tone and terminology across the site | consistent | polish |
 | CONTENT-DASH | Generated copy uses em-dashes sparingly: max ~1 per paragraph, never two in one sentence, never as a default connector where a comma, period, or parentheses serve (applies to copy the tool writes, not user content) | conforms | polish |
+| CONTENT-POINTFIRST | Each content block leads with its conclusion: articles, doc sections, and long copy open with the takeaway / a topic sentence, not a wind-up (inverted pyramid), so a reader who stops after the first sentence still gets the gist | every section / standalone block | minor |
+| CONTENT-SIGNPOST | Headings are self-summarizing and form a meaningful outline: reading only the heading hierarchy conveys the page's gist; no vacuous headings ("Introduction", "Overview", "Features") where a descriptive one fits | outline conveys gist; no vacuous headings | minor |
+| CONTENT-FIGCAPTION | Meaningful figures (charts, diagrams, data viz, explanatory screenshots) carry a visible caption or title that makes them understandable standalone — distinct from `alt`, which serves non-sighted users | 100% of explanatory figures | polish |
 
 ## PERF — Performance (UX-affecting)
 
@@ -124,6 +134,7 @@ or obstructs it. See [`value.md`](./value.md).
 | GGUX-CONTEXT | Designed for real context of use (mobile interruptions, one-handed, glanceable); the core task is reachable without unnecessary steps | conforms | major |
 | GGUX-GROUPING | Layout uses Gestalt grouping (proximity, similarity, enclosure, common region, continuation, closure) so relationships are perceived pre-attentively | applied | minor |
 | GGUX-CHART | Data is shown in a format suited to the question (compare→bar, trend over time→line, part-to-whole→stacked bar / sparing pie, correlation→scatter, distribution→histogram); no misleading scales or chart junk | suitable | minor |
+| GGUX-OVERVIEW | On dashboards, long-form content, and multi-section pages, give a bird's-eye overview before detail (summary / at-a-glance metrics, table of contents, or section map with progress) — "overview first, then details on demand" | present on pages > ~3 viewports or > ~5 sections/widgets | minor |
 
 ---
 

@@ -53,3 +53,31 @@ install guide."
   prefer commas, periods, or parentheses; reserve the em-dash for a deliberate
   aside or an emphatic break. Max ~1 per paragraph, never two in one sentence.
   Multiple dashes per paragraph is the tell of generated text — rewrite it.
+
+## Lead with the point — `CONTENT-POINTFIRST`
+
+Show your hand immediately. Every article, doc section, and long copy block opens
+with its conclusion: the takeaway first, support after (inverted pyramid). Open
+paragraphs with topic sentences. A reader who stops after sentence one should still
+leave with the gist. This is the block-level discipline; `CONTENT-VALUEPROP` is its
+page-level, above-the-fold version.
+
+## Signposting — `CONTENT-SIGNPOST`
+
+Headings are the surface clues readers scan first, so make them self-summarizing.
+Reading only the heading hierarchy should convey the page's gist. Prefer
+descriptive, near-full-sentence headings ("How billing proration works") over
+vacuous labels ("Overview", "Details", "More"). This is distinct from
+`A11Y-HEADINGS`, which only checks heading *structure*.
+
+## Figures that stand alone — `CONTENT-FIGCAPTION`
+
+Many readers read only the figures. Give each meaningful chart, diagram, or
+explanatory screenshot a visible caption or title that delivers its point without
+the surrounding prose, and label data directly on the graphic rather than forcing a
+trip to a legend. This is the sighted-reader complement to `A11Y-ALT`, and the "say
+what it shows" complement to `GGUX-CHART`'s "pick the right chart."
+
+> These three derive from Patrick Winston's *Make It Clear* (MIT Press): show your
+> hand immediately, self-summarizing section titles as scannable surface clues, and
+> illustrations that carry their own captions because many readers read only those.

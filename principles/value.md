@@ -55,6 +55,16 @@ Do I need this right now?
          └─ NO  → CUT IT
 ```
 
+## Orient before detail — `GGUX-OVERVIEW`
+
+The inverse of progressive disclosure: where complexity is unavoidable (dashboards,
+long-form content, multi-section pages), give the user a bird's-eye view *before*
+the detail — at-a-glance summary metrics, a table of contents, or a section map
+with reading progress. "Overview first, zoom and filter, then details on demand"
+(Shneiderman). Orientation to the whole is what lets people drill in without getting
+lost. This echoes da Vinci's bird's-eye maps and exploded views — see the lineage
+note in [`README.md`](./README.md).
+
 ## The timeless principles (Value Made Visible)
 
 These predate the term "UX." Trends churn; fundamentals don't. They're applied
